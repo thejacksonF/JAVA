@@ -1,6 +1,6 @@
 
 class Nombres {
-    public void nombrecitos() {
+    public void lista_de_nombres_de_los_estudiantes() {
         String[] nombres = new String[14];
         nombres [0]="Leslie Sosa";
         nombres [1]="Argel Jhamir";
