@@ -24,6 +24,10 @@ public class zPrincipal {
         int finalGrade = objStudentsGrades.calculateFinalGrade (80,75,90,95);
         System.out.println(finalGrade);
 
+        String percentageOfAbsences = objStudentsGrades.checkFailureByAbsences(64,7);
+        System.out.println(percentageOfAbsences);
+
+
 
     } 
 

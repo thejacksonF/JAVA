@@ -7,14 +7,29 @@ public class StudentsGrades {
     }
 
 
-    public int calculateFinalGrade (int firstPartial, int secondPartial, int thirdPartial ) {
+    public int calculateFinalGrade (int firstPartial, int secondPartial, int thirdPartial, int finalExam ) {
         double finalGrade=((firstPartial + secondPartial + thirdPartial));
 
-        return (int)(finalGrade);
+        return (int)finalGrade;
+    }
+    
+    
+    public String checkFailureByAbsences (int totalHours, int absences) {
+        double percentageOfAbsences =(((double)absences / (double) totalHours) * 100);
+        if (percentageOfAbsences <10 ){
+            return "alumno cumple con las assitencias mínimas";
+        } else {
+            return "alumno no cumple con las asistencias mínimas";
+        }
+
     }
 
 
+
 }
+
+
+
 
 
 
