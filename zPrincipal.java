@@ -1,6 +1,6 @@
 
 
-public class Principal {
+public class zPrincipal {
     public static void main(String[] args) {
         
        Juego obJuego= new Juego();
@@ -15,6 +15,14 @@ public class Principal {
         UserData objUserData = new UserData();
         String fullName = objUserData.NombreyApellido("Francisco", "Avitia");
         System.out.println(fullName);
+
+
+        StudentsGrades objStudentsGrades = new StudentsGrades();
+        int partialGrade= objStudentsGrades.calculatePartialGrade(85,90);
+        System.out.println(partialGrade);
+
+        int finalGrade = objStudentsGrades.calculateFinalGrade (80,75,90,95);
+        System.out.println(finalGrade);
 
 
     } 
