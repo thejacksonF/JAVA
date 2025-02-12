@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 public class zPrincipal {
     public static void main(String[] args) {
@@ -17,16 +17,41 @@ public class zPrincipal {
         System.out.println(fullName);
 
 
+      //la creacion de un objeto:
         StudentsGrades objStudentsGrades = new StudentsGrades();
         int partialGrade= objStudentsGrades.calculatePartialGrade(85,90);
         System.out.println(partialGrade);
 
+
         int finalGrade = objStudentsGrades.calculateFinalGrade (80,75,90,95);
         System.out.println(finalGrade);
+
 
         String percentageOfAbsences = objStudentsGrades.checkFailureByAbsences(64,7);
         System.out.println(percentageOfAbsences);
 
+
+        Scanner objScanner = new Scanner(System.in) ;
+        
+        System.out.print("Dame el valor de la area: ");
+        double base = objScanner.nextDouble();
+
+        System.out.print("Dame el valor de la altura: ");
+        double height = objScanner.nextDouble();
+
+        TriangleArea objTriangleArea = new TriangleArea();
+        double area = objTriangleArea.CalculateTriangleArea(base, height);
+        System.out.println("El area del triangulo es: " + area);
+
+        objScanner.close();
+
+
+
+
+
+
+
+        
 
 
     } 
