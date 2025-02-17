@@ -41,10 +41,16 @@ public class zPrincipal {
 
         TriangleArea objTriangleArea = new TriangleArea();
         double area = objTriangleArea.CalculateTriangleArea(base, height);
-        System.out.println("El area del triangulo es: " + area);
+        System.out.println(String.format("El area del triangulo es: %f", area));
 
         objScanner.close();
 
+        //Objeto del CirculeArea
+
+
+        MultidimensionalArray objMultidimensionalArray = new MultidimensionalArray();
+        objMultidimensionalArray.printbidimensionalArray();
+        
 
 
 
