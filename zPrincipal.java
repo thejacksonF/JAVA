@@ -51,7 +51,8 @@ public class zPrincipal {
         MultidimensionalArray objMultidimensionalArray = new MultidimensionalArray();
         objMultidimensionalArray.printbidimensionalArray();
         
-
+        ExcerciseNumberType objExcerciseNumberType = new ExcerciseNumberType();
+        objExcerciseNumberType.CalculateOddOrEven();
 
 
 
