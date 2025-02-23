@@ -55,6 +55,12 @@ public class zPrincipal {
         objExcerciseNumberType.CalculateOddOrEven();
 
 
+        ArrayListExample objArrayListExample = new ArrayListExample();
+        objArrayListExample.ShowProgrammingLenguages();
+
+        StudentsGradesManual objStudentsGradesManual = new StudentsGradesManual();
+        objStudentsGradesManual.GiveGradesAndCalculateThem();
+
 
 
 

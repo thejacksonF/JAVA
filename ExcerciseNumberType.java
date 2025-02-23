@@ -10,8 +10,8 @@ public class ExcerciseNumberType {
         18, 21, 24, 27, 30, 33, 36, 39, 42, 45
     };
 
-    int even = 0;
-    int odd = 0;
+    int even = 0;  // se crean las variables que usaremos para almacenar
+    int odd = 0;    //los valores al dividir, osea se dividiran y luego se almacenaran.
     int zero = 0;
 
 
@@ -30,7 +30,7 @@ public class ExcerciseNumberType {
         }
         System.out.println("Total de numeros pares" + even);
         System.out.println("Total de numeros nones" + odd);  
-        System.out.println("Total de ceros" );  
+        System.out.println("Total de ceros" + zero);  
 
     
     
