@@ -32,18 +32,18 @@ public class zPrincipal {
 
 
         //Objeto del TriangleArea
-        Scanner objScanner = new Scanner(System.in) ;
-        System.out.print("Dame el valor de la area: ");
-        double base = objScanner.nextDouble();
+       // Scanner objScanner = new Scanner(System.in) ;
+        //System.out.print("Dame el valor de la area: ");
+        //double base = objScanner.nextDouble();
 
-        System.out.print("Dame el valor de la altura: ");
-        double height = objScanner.nextDouble();
+       // System.out.print("Dame el valor de la altura: ");
+        //double height = objScanner.nextDouble();
 
-        TriangleArea objTriangleArea = new TriangleArea();
-        double area = objTriangleArea.CalculateTriangleArea(base, height);
-        System.out.println(String.format("El area del triangulo es: %f", area));
+       // TriangleArea objTriangleArea = new TriangleArea();
+        //double area = objTriangleArea.CalculateTriangleArea(base, height);
+        //System.out.println(String.format("El area del triangulo es: %f", area));
 
-        objScanner.close();
+        //objScanner.close();
 
         //Objeto del CirculeArea
 
@@ -55,17 +55,35 @@ public class zPrincipal {
         objExcerciseNumberType.CalculateOddOrEven();
 
 
-        ArrayListExample objArrayListExample = new ArrayListExample();
+        ProgrammingLanguages objArrayListExample = new ProgrammingLanguages();
         objArrayListExample.ShowProgrammingLenguages();
 
-        StudentsGradesManual objStudentsGradesManual = new StudentsGradesManual();
-        objStudentsGradesManual.GiveGradesAndCalculateThem();
+        ApprovedOrNot objApprovedOrNot = new ApprovedOrNot();
+        objApprovedOrNot.CheckApprovalByGrades();
+
+        Matrix objMatrix = new Matrix();
+        objMatrix.CalculateMatrix();
 
 
+        //cosa del partial grade del examen 
+
+        Scanner objScanner2 = new Scanner(System.in);
+
+        System.out.print("Dame las califas del examen: ");
+        double partialGrade2 = objScanner2.nextDouble();
+
+        System.out.print("Dame las califas de tareas: ");
+        double homeworkGrade2 = objScanner2.nextDouble();
+
+        GradeCalculationPartial gradeCalculation = new GradeCalculationPartial();
+        double finalGrade2 = gradeCalculation.gradeCalculationPartial2(partialGrade2, homeworkGrade2);
+
+        System.out.println(String.format("Calificación final: %.1f", finalGrade2));
+
+        objScanner2.close();
 
 
-        
-
+      
 
     } 
 
