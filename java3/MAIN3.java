@@ -17,6 +17,12 @@ public class MAIN3 {
         list.display();
 
 
+        EjemploCola cola = new EjemploCola();
+        cola.add("Cliente 1");
+        cola.add("Cliente 2");
+        cola.add("Cliente 3");
+        System.out.println("Cliente al frente: " + cola.peek());
+        
 
 
 

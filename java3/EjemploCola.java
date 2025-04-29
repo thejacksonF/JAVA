@@ -21,5 +21,18 @@ public class EjemploCola {
 
         // PEEK: Consultando quién está ahora al frente
         System.out.println("Cliente al frente ahora: " + cola.peek());
+
+
+
+    }
+
+    public void add(String string) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'add'");
+    }
+
+    public String peek() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'peek'");
     }
 }

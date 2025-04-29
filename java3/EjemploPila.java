@@ -18,5 +18,6 @@ public class EjemploPila {
 
         // PEEK: Estado final de la pila
         System.out.println("Elemento en la cima ahora: " + pila.peek());
+        
     }
 }
