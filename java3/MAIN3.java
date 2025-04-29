@@ -15,5 +15,22 @@ public class MAIN3 {
 
         System.out.println("After deleting 20:");
         list.display();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     }
 }
