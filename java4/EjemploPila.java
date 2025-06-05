@@ -2,27 +2,32 @@ package JAVA.java4;
 import java.util.Stack;
 
 public class EjemploPila {
-    public static void main(String[] args) {
-        Stack<String> pila = new Stack<>();
+    private Stack<String> pila;
 
-        // PUSH: Agregando elementos
-        pila.push(" Camarones con pollo");
+    public EjemploPila() {
+        pila = new Stack<>();
+    }
 
-        pila.push("Langosta con pure");
+    public void push(String elemento) {
+        pila.push(elemento);
+    }
 
-        pila.push("Rib-eye con pure y brocoli");
+    public String peek() {
+        return pila.isEmpty() ? "" : pila.peek();
+    }
 
-        pila.push("spaguetti con albondigas y salsa de tomate");
+    public String pop() {
+        return pila.isEmpty() ? "No se puede borrar nada porque pues, no hay nada :D" : pila.pop();
+    }
 
-        pila.push("Plato con ensalada");
 
+    public void mostrarEstado() {
+        System.out.println("Elemento hasta arriba: " + peek());
 
-        System.out.println("Elemento de haasta arriba: " + pila.peek());
+        System.out.println("Se removió el elemento: " + pop());
+        System.out.println("Se removió el elemento: " + pop());
 
-        System.out.println("Se removio el elemento: " + pila.pop());
-        System.out.println("Se removio el elemento: " + pila.pop());
+        System.out.println("Nuevo elemento hasta arriba: " + peek());
 
-        System.out.println("Nuevo elemento: " + pila.peek());
-        
     }
 }

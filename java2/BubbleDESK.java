@@ -1,3 +1,5 @@
+package JAVA.java2;
+
 public class BubbleDESK{ 
 
         int[] arrayWorstBubbleCase = {5, 4, 3, 2, 1};

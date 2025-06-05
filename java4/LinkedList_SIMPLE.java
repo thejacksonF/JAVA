@@ -1,93 +1,79 @@
 package JAVA.java4;
+
 public class LinkedList_SIMPLE {
 
-    Node head; // head of list
-
-    // Linked list Node.
-    // Node is a static nested class
-    // so main() can access it
+    // Node class
     static class Node {
-
         int data;
         Node next;
 
-        // Constructor
-        Node(int d)
-        {
-            data = d;
+        Node(int value) {
+            data = value;
             next = null;
         }
     }
 
-    // Method to insert a new node
-    public static LinkedList_SIMPLE insert(LinkedList_SIMPLE list,
-                                    int data)
-    {
-        // Create a new node with given data
-        Node new_node = new Node(data);
-        new_node.next = null;
+    // Linked list class
+    Node head;
 
-        // If the Linked List is empty,
-        // then make the new node as head
-        if (list.head == null) {
-            list.head = new_node;
-        }
-        else {
-            // Else traverse till the last node
-            // and insert the new_node there
-            Node last = list.head;
-            while (last.next != null) {
-                last = last.next;
+    // Insert at the end
+    public void insert(int value) {
+        Node newNode = new Node(value);
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node current = head;
+            while (current.next != null) {
+                current = current.next;
             }
-
-            // Insert the new_node at last node
-            last.next = new_node;
-        }
-
-        // Return the list by head
-        return list;
-    }
-
-    // Method to print the LinkedList.
-    public static void printList(LinkedList_SIMPLE list)
-    {
-        Node currNode = list.head;
-
-        System.out.print("LinkedList: ");
-
-        // Traverse through the LinkedList
-        while (currNode != null) {
-            // Print the data at current node
-            System.out.print(currNode.data + " ");
-
-            // Go to next node
-            currNode = currNode.next;
+            current.next = newNode;
         }
     }
 
-    // **************MAIN METHOD**************
-
-    // method to create a Singly linked list with n nodes
-    public static void main(String[] args)
-    {
-        /* Start with the empty list. */
-        LinkedList_SIMPLE list = new LinkedList_SIMPLE();
-
-        //
-        // ******INSERTION******
-        //
-
-        // Insert the values
-        list = insert(list, 1);
-        list = insert(list, 2);
-        list = insert(list, 3);
-        list = insert(list, 4);
-        list = insert(list, 5);
-        list = insert(list, 6);
-        list = insert(list, 7);
-        list = insert(list, 8);
-
-        // Print the LinkedList
-        printList(list);
+    // Display the list
+    public void display() {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.data + " -> ");
+            current = current.next;
+        }
+        System.out.println("null");
     }
+
+    // Search for a value
+    public boolean search(int value) {
+        Node current = head;
+        while (current != null) {
+            if (current.data == value) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
+    // Delete a value
+    public void delete(int value) {
+        if (head == null) return;
+
+        if (head.data == value) {
+            head = head.next;
+            return;
+        }
+
+        Node current = head;
+        while (current.next != null && current.next.data != value) {
+            current = current.next;
+        }
+
+        if (current.next != null) {
+            current.next = current.next.next;
+        }
+    }
+
+    // Test the list
+
 }
+
+//use el codigo que el profe nos proporiciono, pero quise ponerle más elementos a la hora de llamarlo en el main para que se vea
+//un poco más utilizado y aprovechado y no solo puesto porque si.

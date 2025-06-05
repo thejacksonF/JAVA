@@ -1,3 +1,5 @@
+package JAVA.java2;
+
 public class PRINCIPALJAVA2 {
     public static void main(String[] args) {
 
@@ -21,6 +23,12 @@ public class PRINCIPALJAVA2 {
         for (int i = 0; i < objInsertionSort.arrayWorstInsertionCase.length; i++) {
             System.out.print(objInsertionSort.arrayWorstInsertionCase[i] + " ");
         }
- 
+
+        
+            // Crear una instancia de la clase y llamar al método
+            HashMapTry1 obj = new HashMapTry1();
+            obj.hashConValores();
+        }
     }
-}
+ 
+

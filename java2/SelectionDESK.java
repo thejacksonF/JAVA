@@ -1,3 +1,6 @@
+package JAVA.java2;
+
+
 public class SelectionDESK {
     int arrayWorstSelectionCase[] = {5,4,3,2,1};
     public int selectionSort(int[] arr) {
