@@ -1,21 +1,21 @@
 class Solution(object):
-    def romanToInt(self, s):
+    def romanToInt(self, valorEnTexto):
         Valores_de_las_letras = {
-            'I': 1,
-            'V': 5,
-            'X': 10,
-            'L': 50,
-            'C': 100,
-            'D': 500,
-            'M': 1000
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000
         }
 
-        total = Valores_de_las_letras[s[-1]]
-        for i in range(len(s) - 2, -1, -1):
-            if Valores_de_las_letras[s[i]] < Valores_de_las_letras[s[i + 1]]:
-                total -= Valores_de_las_letras[s[i]]
+        total = Valores_de_las_letras[valorEnTexto[-1]]
+        for i in range(len(valorEnTexto) - 2, -1, -1):
+            if Valores_de_las_letras[valorEnTexto[i]] < Valores_de_las_letras[valorEnTexto[i + 1]]:
+                total -= Valores_de_las_letras[valorEnTexto[i]]
             else:
-                total += Valores_de_las_letras[s[i]]
+                total += Valores_de_las_letras[valorEnTexto[i]]
 
         return total
 
