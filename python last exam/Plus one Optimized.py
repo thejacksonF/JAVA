@@ -9,6 +9,6 @@ class Solution(object):
         return [int(d) for d in str(numero_real)]
 
 VotS = Solution()
-print(VotS.plusOne([88, 25, 32]))
-print(VotS.plusOne([23, 35, 72, 51]))
+print(VotS.plusOne([8, 2, 3]))
+print(VotS.plusOne([88, 35, 32]))
 print(VotS.plusOne([9]))

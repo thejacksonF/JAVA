@@ -6,13 +6,13 @@ class Solution(object):
 
         numero_real = int(num_empty) + 1
 
-        result = []
+        resultado = []
         for ch in str(numero_real):
-            result.append(int(ch))
+            resultado.append(int(ch))
 
-        return result
+        return resultado
 
 VotS= Solution()
 print(VotS.plusOne([120, 9, 57, 303]))
-print(VotS.plusOne([42, 3, 2, 1]))
+print(VotS.plusOne([1, 2, 3]))
 print(VotS.plusOne([10]))
