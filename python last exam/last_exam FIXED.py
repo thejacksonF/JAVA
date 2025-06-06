@@ -134,48 +134,48 @@ Version simple
 """
 
 class Solution(object):
-    def CalcularValoresRomanos(self, s):
+    def CalcularValoresRomanos(self, valorEnTexto):
         Valores_de_las_letras = {
-            'I': 1,
-            'V': 5,
-            'X': 10,
-            'L': 50,
-            'C': 100,
-            'D': 500,
-            'M': 1000
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000
         }
 
         resultado  = 0
         i = 0
-        while i < len(s):
-            if i + 1 < len(s):
-                LETTERS = s[i] + s[i + 1]
-                if LETTERS == 'IV':
+        while i < len(valorEnTexto):
+            if i + 1 < len(valorEnTexto):
+                LETTERS = valorEnTexto[i] + valorEnTexto[i + 1]
+                if LETTERS == "IV":
                     resultado += 4
                     i += 2
                     continue
-                elif LETTERS == 'IX':
+                elif LETTERS == "IX":
                     resultado += 9
                     i += 2
                     continue
-                elif LETTERS == 'XL':
+                elif LETTERS == "XL":
                     resultado += 40
                     i += 2
                     continue
-                elif LETTERS == 'XC':
+                elif LETTERS == "XC":
                     resultado += 90
                     i += 2
                     continue
-                elif LETTERS == 'CD':
+                elif LETTERS == "CD":
                     resultado += 400
                     i += 2
                     continue
-                elif LETTERS == 'CM':
+                elif LETTERS == "CM":
                     resultado += 900
                     i += 2
                     continue
 
-            resultado += Valores_de_las_letras[s[i]]
+            resultado += Valores_de_las_letras[valorEnTexto[i]]
             i += 1
 
         return resultado
@@ -188,23 +188,23 @@ print(VotS.CalcularValoresRomanos("LXXVII"+"XLX"))   #numero especial
 """Version Optimizada"""
 
 class Solution(object):
-    def romanToInt(self, s):
+    def romanToInt(self, valorEnTexto):
         Valores_de_las_letras = {
-            'I': 1,
-            'V': 5,
-            'X': 10,
-            'L': 50,
-            'C': 100,
-            'D': 500,
-            'M': 1000
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000
         }
 
-        total = Valores_de_las_letras[s[-1]]
-        for i in range(len(s) - 2, -1, -1):
-            if Valores_de_las_letras[s[i]] < Valores_de_las_letras[s[i + 1]]:
-                total -= Valores_de_las_letras[s[i]]
+        total = Valores_de_las_letras[valorEnTexto[-1]]
+        for i in range(len(valorEnTexto) - 2, -1, -1):
+            if Valores_de_las_letras[valorEnTexto[i]] < Valores_de_las_letras[valorEnTexto[i + 1]]:
+                total -= Valores_de_las_letras[valorEnTexto[i]]
             else:
-                total += Valores_de_las_letras[s[i]]
+                total += Valores_de_las_letras[valorEnTexto[i]]
 
         return total
 
