@@ -11,4 +11,4 @@ class Solution(object):
 VotS = Solution()
 print(VotS.plusOne([8, 2, 3]))
 print(VotS.plusOne([88, 35, 32]))
-print(VotS.plusOne([9]))
+print(VotS.plusOne([9,3,5]))
